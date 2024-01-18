@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Get Pick List Values Demo 🙇‍♂️">
+        <div class="slds-var-p-around_medium">
+            <lightning-combobox
+                name="Account Source"
+                label="Account source"
+                placeholder="Account Source"
+                options={sourceOptions}
+                onchange={onSourceChangeHandler}
+            >
+
+            </lightning-combobox>
+
+        </div>
+        <p>You selected : {selectedSource}</p>
+    </lightning-card>
+</template>

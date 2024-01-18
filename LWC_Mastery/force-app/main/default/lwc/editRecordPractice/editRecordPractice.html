@@ -1,0 +1,64 @@
+<template>
+    <lightning-card title="Edit a Form :">
+        <lightning-record-form
+        object-api-name={objectApiName}   
+        record-id={recordId}
+        fields={myFields}
+        ></lightning-record-form>
+    </lightning-card>
+<!-- More Customizable and Controllable Forms for records  -->
+    <lightning-card title="Using Lightning -Record Edit Form Demo ">
+            <lightning-record-edit-form
+                record-id={recordId}
+                object-api-name={objectApiName}
+                onerror={handleError}
+            >
+        <lightning-messages></lightning-messages>
+        <template for:each={fields} for:item="field">
+                <lightning-input-field key={field.field} field-name={field.field} ></lightning-input-field>
+        </template>
+        <div class="slds-align_absolute-center slds-p-around_medium">
+            <lightning-button
+                class="slds-m-around_xx-small"
+                label="Cancel"
+                onclick={handleReset}
+            ></lightning-button>
+            <lightning-button
+                class="slds-m-around_xx-small"
+                label="Save"
+                type="submit"
+                variant="brand"
+            >
+
+            </lightning-button>
+        </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+
+    <!-- Custom Validation of record edit form s  -->
+    <lightning-card title="Custom validation of Edit record Form Demo 🎯💡">
+        <template if:true={accountData}>
+            <lightning-record-edit-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+                onsubmit={handleSubmit}
+            >
+                <lightning-input
+                    label="Phone"
+                    name="Phone"
+                    value={phone}
+                    onchange={handleChange}
+                    class="slds-m-bottom_x-small"
+                ></lightning-input>
+
+                <lightning-button class="slds-m-top_small" type="submit" label="Update Account Phone number"></lightning-button>
+        
+            </lightning-record-edit-form>
+        </template>
+    </lightning-card>
+
+</template>
+
+   <!-- <lightning-input-field field-name="" value={}></lightning-input-field>
+        <lightning-input-field field-name="" value={}></lightning-input-field>
+        <lightning-input-field field-name="" value={}></lightning-input-field> -->

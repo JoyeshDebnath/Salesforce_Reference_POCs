@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Contact Form Edit Only">
+        <lightning-record-edit-form
+            record-id="0035j000012HwHDAA0"
+            density="auto"
+            object-api-name={objectName}
+            onload={handleLoad}
+            onsubmit={handleSubmit}
+            onsuccess={handleSuccess}
+            onerror={handleError}
+        >
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="12">
+                    <lightning-messages></lightning-messages>
+                </lightning-layout-item>
+               
+                <lightning-layout-item size="12">
+                        <lightning-input-field field-name="Name"></lightning-input-field>
+                        <lightning-input-field field-name="MobilePhone"></lightning-input-field>
+
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <lightning-input-field field-name="Email"></lightning-input-field>
+                    <lightning-input-field field-name="Department"></lightning-input-field>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12" class="slds-align_absolute-center">
+                    <lightning-button label="Cancel" class="slds-m-right_small" onclick={resetForm}></lightning-button>
+                    <lightning-button type="submit" variant="brand" label="Save" onclick={saveRecord}></lightning-button>
+                </lightning-layout-item>
+           </lightning-layout>
+    </lightning-record-edit-form>
+    </lightning-card>
+</template>

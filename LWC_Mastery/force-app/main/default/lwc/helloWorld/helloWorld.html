@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="LWC Decorator ">
+        <p>HI, {parentVar}</p>
+        <div>
+            <lightning-button variant="brand" label="Get Message" onclick={handleMsg}></lightning-button>
+        </div>
+         <div>
+            <lightning-button variant="brand" label="Change Message" onclick={handleChangeMsg}></lightning-button>
+        </div>
+        <c-child-hello-world></c-child-hello-world>
+    
+    <br/>
+    <div class="slds-m-around_medium">
+            <lightning-input label="Name" value={greeting} onchange={onChangeHandler}></lightning-input>
+    </div>
+    <template if:true={greeting}>
+            <p>{greeting}</p>
+    </template>
+    <p>Wire Decorator </p>
+    <template if:true={accountList.data}>
+        <template for:each={accountList.data} for:item="acc">
+            <p key={acc.Id}>{acc.Name}</p>
+        </template>
+    </template>
+     <template if:true={accountList.error}>
+       <p>Something Went Wrong !!!</p>
+    </template>
+    </lightning-card>
+</template>

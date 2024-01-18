@@ -1,0 +1,56 @@
+<template>
+    <lightning-card title="create edit update records using Apex class 🎃" icon-name="action:new_lead">
+           
+        
+        <template if:true={isLoading}>
+                <lightning-spinner size="medium" alternative-text="Loading .."></lightning-spinner>
+        </template>
+        <div class="slds-p-around_medium lgc-bg">
+                <lightning-input 
+                    type="text" 
+                    label="Customer Name" 
+                    name="customerName"
+                     
+                    onchange={handleFieldValueChange}>
+                    
+                </lightning-input>
+            </div>
+             <div class="slds-p-around_medium lgc-bg">
+                <lightning-input 
+                    type="email" 
+                    label="Customer Email" 
+                    name="customerEmail"
+                    
+                    onchange={handleFieldValueChange}
+                >
+                        
+                </lightning-input>
+            </div>
+             <div class="slds-p-around_medium lgc-bg">
+                <lightning-input 
+                    type="phone" 
+                    label="Customer Phone Number" 
+                    name="customerPhone"
+                    
+                    onchange={handleFieldValueChange}
+                >
+                        
+                </lightning-input>
+            </div>
+
+             <div class="slds-p-around_medium lgc-bg">
+                <lightning-combobox 
+                    name="customerIsActive" 
+                    label="Active Status" 
+                    value={value} 
+                    placeholder="Select Active status "
+                    options={options}
+                    onchange={handleFieldValueChange}
+                    >
+                </lightning-combobox>
+            </div>
+            <div class="slds-p-around_small lgc-bg slds-size_6-of-12 slds-align_absolute-center">
+                <lightning-button label="Save"  variant="brand" onclick={handleSaveRecord}></lightning-button>
+            </div>
+    </lightning-card>
+</template>

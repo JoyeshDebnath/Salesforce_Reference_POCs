@@ -1,0 +1,16 @@
+<template>
+    <lightning-card tiitle="Permission Based UI Rendering DEMO 🙇‍♂️">
+        <div>
+            <template if:true={isUIAccessible}>
+                <lightning-card title="I am Component 1 ✨ ">
+                    <h2>Hello I am Component 1 👦</h2>
+                </lightning-card>
+            </template>
+            <template if:false={isUIAccessible}>
+                <lightning-card title="I am Component 2 ">
+                    <h2>Hello I am Component 2 ✏️</h2>
+                </lightning-card>
+            </template>
+        </div>
+    </lightning-card>
+</template>

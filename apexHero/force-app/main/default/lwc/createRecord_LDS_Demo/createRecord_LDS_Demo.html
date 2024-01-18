@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Create Record Demo 🎃">
+        <lightning-input
+            name="name"
+            label="Enter name"
+            value={name}
+            onchange={nameChangeHandler}
+        ></lightning-input>
+
+        <lightning-button label="create" onclick={saveRecord}></lightning-button>
+    </lightning-card>
+</template>

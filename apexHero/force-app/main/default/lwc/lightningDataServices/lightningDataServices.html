@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="lightning data services demo ✨">
+        <lightning-record-form
+            object-api-name="Contact"
+            record-id={recordId}
+            fields={fields}
+        >
+
+        </lightning-record-form>
+
+        <!-- Lightning Record Edit Form  -->
+        <lightning-card title="lightning Record Edit Form">
+            <lightning-record-edit-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+                onsubmit={handleSubmit}
+                onerror={handleError}
+                onsuccess={handleSuccess}
+
+            >
+                <lightning-input-field field-name={nameField}></lightning-input-field>
+                <lightning-input-field field-name={phoneField}></lightning-input-field>
+                <div class="slds-align_absolute-center">
+                    <!-- <lightning-button ></lightning-button> -->
+                    <lightning-button label="Save" variant="brand" type="submit" onclick={submitRecord}></lightning-button>
+                </div>
+        </lightning-record-edit-form>
+        </lightning-card>
+
+        <!-- Record Edit View Form Section -->
+        <lightning-card title="Record View Mode">
+            <lightning-record-view-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+
+            >
+            <lightning-output-field field-name={nameField}></lightning-output-field>
+            <lightning-output-field field-name={phoneField}></lightning-output-field>
+            
+        </lightning-record-view-form>
+        </lightning-card>
+    </lightning-card>
+</template>

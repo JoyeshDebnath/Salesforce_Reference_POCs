@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Object Info Adapter LDS 🎅">
+        <div class="slds-var-p-around_medium">
+            <template if:true={objectData}>
+                <div>Default Record Type Id: {objectData.defaultRecordTypeId}</div>
+                <div>Object Api Name : {objectData.apiName} </div>
+            </template>
+
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Object Infos Adapter LDS 🎅">
+        <div class="slds-var-p-around_medium">
+            <template if:true={multipleObjectsData}>
+                <template for:each={multipleObjectsData.results} for:item="object">
+                    <div key={object.result.apiName}>
+                        <div>Default Record Type Id: {object.result.defaultRecordTypeId}</div>
+                        <div>Object Api Name : {object.result.apiName} </div>
+                    </div>
+                </template>
+                
+            </template>
+
+        </div>
+    </lightning-card>
+
+     <lightning-card title="getPick list Demo 🎃">
+        <div class="slds-var-p-around_medium">
+            
+
+        </div>
+    </lightning-card>
+</template>

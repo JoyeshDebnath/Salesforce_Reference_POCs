@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Record Edit Account Details ✏️">
+        <lightning-layout>
+            <lightning-layout-item>
+                <lightning-record-edit-form
+                    record-id={recordId}
+                    object-api-name="Account"
+                    
+                >
+                    <lightning-input-field field-name={accountName} ></lightning-input-field>
+                    <lightning-input-field field-name={accountType}></lightning-input-field>
+                    <lightning-button variant="brand" label="Cancel" name="cancel"  onclick={resetForm}></lightning-button>
+                    <lightning-button variant="brand" label="Save" name="save" type="submit"></lightning-button>
+                </lightning-record-edit-form>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

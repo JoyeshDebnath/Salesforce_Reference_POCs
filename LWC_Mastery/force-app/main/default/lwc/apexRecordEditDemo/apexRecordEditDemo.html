@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Edit Form Demo using Apex class 🎯">
+        <lightning-button label="Save Data" onclick={handleSave}></lightning-button>
+
+        <template if:true={accountData}>
+            <template for:each={accounData} for:item="account">
+                <lightning-card key={account.Id} variant="Narrow" title="Account Form" icon-name="standard:account">
+                    <lightning-input type="text" label="Name" data-id={account.Id} data-field="Name" onchange={handleOnChange} value={account.Name}></lightning-input>
+                </lightning-card>
+            </template>
+        </template>
+    </lightning-card>
+</template>

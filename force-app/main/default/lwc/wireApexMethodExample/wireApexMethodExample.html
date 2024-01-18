@@ -1,0 +1,48 @@
+<template>
+    <!-- using property demo in wire apex  -->
+    <lightning-card title="Wire Apex Property Method ✨">
+        <div class="slds-p-around_medium">
+                <template if:true={contacts.data}>
+                    <template for:each={contacts.data} for:item="contact">
+                        <div class="slds-box slds-box_xx-small" key={contact.Id}>
+                            <p><strong>Name ✅: {contact.Name}</strong></p>
+                        </div>
+                    </template>
+                </template>
+        </div>
+            
+    </lightning-card>
+    <!-- using property demo in wire apex  -->
+
+
+    <!-- using Method demo in wire apex  -->
+    <lightning-card title="Wire Apex  Method Demo ✨">
+        <div class="slds-p-around_medium">
+                <template if:true={allContacts}>
+                    <template for:each={allContacts} for:item="contact">
+                        <div class="slds-box slds-box_xx-small" key={contact.Id}>
+                            <p><strong>Name ✅: {contact.Name}</strong></p>
+                        </div>
+                    </template>
+                </template>
+        </div>
+            
+    </lightning-card>
+    <!-- using Method demo in wire apex  -->
+
+    <!-- using Method parameter  demo in wire apex  -->
+    <lightning-card title="Apex method with parameter ✨">
+        <div class="slds-p-around_medium">
+            <lightning-input type="text" value={name} onchange={onChangeHandler} label="name" id="name"></lightning-input>
+                <template if:true={allFilteredContacts}>
+                    <template for:each={allFilteredContacts} for:item="contact">
+                        <div class="slds-box slds-box_xx-small" key={contact.Id}>
+                            <p><strong>Name ✅: {contact.Name}</strong></p>
+                        </div>
+                    </template>
+                </template>
+        </div>
+            
+    </lightning-card>
+    <!-- using Method parameter  demo in wire apex  -->
+</template>

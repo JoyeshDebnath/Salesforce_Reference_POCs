@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Get Object Info using wire:">
+        <div class="slds-var-m-around_medium">
+            <div style="padding:10px">
+                <lightning-input placeholder="Enter API name" label="Object name"></lightning-input>
+                    <br/>
+                    <lightning-button 
+                    label="Fetch Object Metdata"
+                    onclick={handleClick}
+                    >
+
+                    </lightning-button>
+                    <br/>
+                <p>{objectMetaData}</p>
+            </div>
+        </div>
+    </lightning-card>
+</template>
