@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Contact List ✅">
+        <template if:true={contactList}>
+
+            <template for:each={contactList} for:item="contact">
+                <c-contact-tile key={contact.id} contact={contact}></c-contact-tile>
+            </template>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,9 @@
+<template>
+    <div class="slds-m-around_medium">
+        <lightning-input value={p} label="P Amount"></lightning-input>
+        <lightning-input value={rate} label="Rate"></lightning-input>
+        <lightning-input value={time} type="number" formatter="percent-fixed" step="1" label="Time"></lightning-input>
+    <br>
+    <lightning-button variant="brand" label="Calculate SI" onclick={calculateSI}></lightning-button>
+    </div>
+</template>

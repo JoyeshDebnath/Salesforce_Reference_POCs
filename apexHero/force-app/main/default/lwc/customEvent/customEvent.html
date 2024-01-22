@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Events Demo ">
+        <div class="slds-m-around_small" onsimple={handleClickEvent}>
+            <c-child-custom-event message="Message from parent component " static-val="26"></c-child-custom-event>
+        </div>
+
+        <div class="slds-m-around_medium">
+            <lightning-button label="Change Date" onclick={handleClick} variant="brand"></lightning-button>
+        </div>
+
+    </lightning-card>
+
+    <lightning-card title="Shared JS Code Demo : ">
+        <c-shared-misc></c-shared-misc>
+    </lightning-card>
+</template>
